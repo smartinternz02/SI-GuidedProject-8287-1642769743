@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 import pickle
 
-data = pd.read_csv(r"C:\Users\B Sravani\Desktop\internship project\kidney_disease.csv")
+data = pd.read_csv(r"C:/Users/B Sravani/Desktop/internship project/SI-GuidedProject-8287-1642769743/kidney_disease.csv") 
 
 data.drop(["id"],axis=1,inplace=True)
 
