@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html >
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;
+</style>
+  <meta charset="UTF-8">
+  <title>CHRONIC KIDNEY DISEASE</title>
+  
+</head>
+
+
+    <body style="background-color:floralwhite;" text="black">
+     
+      
+   </body>
+    
+
+    <div class="login">
+        <p style= "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
+        <center><h1><mark style="color: whitesmoke ; background-color:purple">CHRONIC KIDNEY DISEASE ANALYSIS</mark></h1></center>
+        <hr width="800px;" color="purple" size="3"></p>
+       
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+    <h1><mark style="color: black ; background-color:azure">Please enter the following details</mark></h1>
+    <p style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
+        
+    
+
+
+    </style></head>
+
+
+    <label for="red_blood_cells">Red Blood Cells:</label>
+            <input type="number" min="0" max="1000"   name="Red Blood Cells" placeholder="Red Blood Cells	" required="required" /><br>
+            
+            </select> <br>
+        
+
+    <br><label for="pus_cell">Pus Cell:</label>
+            <select id="pus_cell" name="pus_cell">
+                <option value=0>notpresent</option>
+                <option value=1>present</option>
+            
+            </select><br>
+            
+
+    
+
+    <br> <label for="diabetesmellitus">Diabetesmellitus:</label>
+            <select id="Diabetesmellitus" name="Diabetesmellitus">
+                <option value=1>yes</option>
+                <option value=0>no</option>
+            
+            </select> <br>
+    <br><label for="pedal_edema">Pedal Edema:</label>
+        <select id="pedal_edema" name="pedal_edema">
+        <option value=0>no</option>
+        <option value=1>yes</option>
+        
+
+
+            </select> <br>
+    <br> <label for="anemia">Anemia:</label>
+            <select id="anemia" name="anemia">
+                <option value=0>no</option>
+                <option value=1>yes</option>
+                
+            
+            </select><br>
+
+    <br> <label for="coronary_artery_disease">Coronary Artery Disease</label>
+            <select id="coronary_artery_disease" name="coronary_artery_disease">
+                <option value=0>no</option>
+                <option value=1>yes</option>
+
+            </select><br>
+
+            
+    <br> 
+    <label for="blood_glucose_random">Blood Glucose Random:</label>
+        <input type="number" min="0" max="1000"   name="blood_glucose_random" placeholder="blood_glucose_random	" required="required" /><br>
+                
+            </select><br>
+
+            
+    <br> 
+    <label for="blood_urea">Blood Urea:</label>
+        <input type="blood_urea" min="0" max="1000"   name="blood_urea" placeholder="blood_urea	" required="required" /><br>
+
+    </p>
+                
+
+
+
+
+    <br>
+    <button type="submit" class="btn btn-primary btn-block btn-large" style="height:30px;width:200px">Predict</button>
+
+        </form>
+    <br>
+
+    <br>
+
+    <mark style="color: white ;font-size:25px; background-color:darkorchid ">{{ prediction_text }}</mark>
+
+
+    <br>
+    <br>
+    <img src="data:image/png;base64,{{url_3}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <img src="data:image/png;base64,{{url_1}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <img src="data:image/png;base64,{{url_4}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <br>
+    <br>
+    <img src="data:image/png;base64,{{url_2}}" alt="Submit Form" height="150" width="711" onerror="this.style.display='none'"/>
+    
+    </div>
+
+
+    </body>
+    </html>
